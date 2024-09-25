@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/cropped-frinex-logo-color-01.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cryco - Crypto theme</title>
+</head>
+<body>
+    <div class="hero">
+        <header class="header">
+            <img class="logo" src="./img/cropped-frinex-logo-color-01.png" alt="logo">
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Interacion</a></li>
+                    <li><a href="#">Inversion</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="open-menu" id="open-menu">
+                <a href="#">Acceso</a>
+            </button>
+        </header>
+        <div class="hero__content">
+            <div class="hero__content-title">
+                <h2>El mejor del mundo
+                    Criptomoneda
+                    
+                    <br>
+                    Centro de crecimiento
+                    </h2>
+                <h3>Bienvenido a Cryco, nuestro confiable exchange de criptomonedas. La seguridad es
+                    primordial. Opere con confianza.</h3>
+                    <button class="open-menu btn-1" id="open-menu">
+                        <a href="#">Empezar</a>
+                    </button>
+            </div>
+            <div class="hero__content-img">
+                <img src="./img/Bitcoin-Cloud-01-800x923.png" alt="">
+            </div>
+        </div>
+    </div>
+    <main class="inversion">
+        <div class="container">
+            <h1>Simulador de Inversiones 💹</h1>
+            <form id="simulatorForm">
+                <label for="cantidad">Cantidad a invertir:</label>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Ej: 1000" required>
+    
+                <label for="activo">Selecciona un activo:</label>
+                <select id="activo" name="activo" required>
+                    <option value="acciones">Acciones</option>
+                    <option value="criptomonedas">Criptomonedas</option>
+                    <option value="fondos">Fondos</option>
+                </select>
+    
+                <button type="submit">Simular Inversión</button>
+            </form>
+    
+            <div id="resultado"></div>
+        </div>
+    </main>
+
+
+
+    <section class="crypto-earn">
+        <div class="crypto-earn__image">
+            <img src="./img/Cryptocurrency-Safe-Storage-01-800x703.png" alt="Crypto vault">
+        </div>
+        <div class="crypto-earn__content">
+            <h3>CRYPTO EARN</h3>
+            <h1>Deposita y gana</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, quis nostrud.</p>
+            <div class="crypto-earn__rates">
+                <div>
+                    <h2>16.5%</h2>
+                    <p>P.A. on Cryptos</p>
+                </div>
+                <div>
+                    <h2>24%</h2>
+                    <p>P.A. on Stablecoins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+    
+</body>
