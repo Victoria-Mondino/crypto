@@ -234,14 +234,14 @@ input, select, button {
     }
 
     header {
-        flex-direction : column; /* Cambia a columna en pantallas pequeñas */
-        align-items : flex-start; /* Alinear a la izquierda */
-        padding : 1.5rem; /* Menor padding en pantallas pequeñas */
+        flex-direction : column; 
+        align-items : flex-start; 
+        padding : 1.5rem; 
     }
 
     .desktop-menu ul li {
-        margin : .5rem 0; /* Espaciado vertical en lugar de horizontal */
-        display : block; /* Cambiar a bloque para mejor visualización en móviles*/
+        margin : .5rem 0; 
+        display : block; 
     }
     .hero__content {
         flex-direction: column;
@@ -258,19 +258,19 @@ input, select, button {
     }
 
     .hero__content-title h3 {
-        font-size : 1.25rem; /* Reducir tamaño de fuente en móviles*/
-        padding : 0 ; /* Eliminar padding en móviles*/
+        font-size : 1.25rem;
+        padding : 0 ; 
     }
 
     .crypto-earn {
-        flex-direction : column ; /* Cambiar a columna en pantallas pequeñas*/
-        align-items : center ; /* Centrar contenido*/
-        padding : 2rem ; /* Mayor espacio interno*/
+        flex-direction : column ; 
+        align-items : center ; 
+        padding : 2rem ; 
     }
 
     .crypto-earn__rates {
         
-        align-items : center ; /* Centrar contenido*/
-        gap : 2rem ; /* Espaciado entre elementos*/
+        align-items : center ; 
+        gap : 2rem ; 
     }
 }
