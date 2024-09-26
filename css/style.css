@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    width: 150px; /* Ajusta el tamaño del logo */
+    width: 150px; 
 }
 
 .desktop-menu {
@@ -49,7 +49,7 @@ header {
 }
 
 .open-menu {
-    background-color: #333E52; /* Color del botón */
+    background-color: #333E52; 
     max-width: 100px;
     color: white;
     border: none;
@@ -98,12 +98,12 @@ header {
 }
 .button-container {
     display: flex;
-    justify-content: space-between; /* Espacio entre los botones */
-    gap: 10px; /* Espacio entre los botones */
+    justify-content: space-between; 
+    gap: 10px; 
 }
 
 .btn-1 {
-    background-color: #007BFF; /* Color del botón */
+    background-color: #007BFF; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -213,4 +213,64 @@ input, select, button {
 
 .crypto-earn__rates p {
     color: #8ca1b3;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+        padding: 8px 5rem;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .open-menu, .close-menu, .mobile-menu__nav {
+        display: none;
+    }
+    .desktop-menu {
+        display: none;
+    }
+
+    header {
+        flex-direction : column; /* Cambia a columna en pantallas pequeñas */
+        align-items : flex-start; /* Alinear a la izquierda */
+        padding : 1.5rem; /* Menor padding en pantallas pequeñas */
+    }
+
+    .desktop-menu ul li {
+        margin : .5rem 0; /* Espaciado vertical en lugar de horizontal */
+        display : block; /* Cambiar a bloque para mejor visualización en móviles*/
+    }
+    .hero__content {
+        flex-direction: column;
+    }
+
+    .hero__content-title h2 {
+        font-size : 2.5rem; 
+        text-align: center;
+    }
+    
+    .hero__content-img img {
+        width: 400px;
+
+    }
+
+    .hero__content-title h3 {
+        font-size : 1.25rem; /* Reducir tamaño de fuente en móviles*/
+        padding : 0 ; /* Eliminar padding en móviles*/
+    }
+
+    .crypto-earn {
+        flex-direction : column ; /* Cambiar a columna en pantallas pequeñas*/
+        align-items : center ; /* Centrar contenido*/
+        padding : 2rem ; /* Mayor espacio interno*/
+    }
+
+    .crypto-earn__rates {
+        
+        align-items : center ; /* Centrar contenido*/
+        gap : 2rem ; /* Espaciado entre elementos*/
+    }
 }

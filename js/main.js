@@ -29,6 +29,18 @@ document.getElementById("simulatorForm").addEventListener("submit", function(eve
         }
     }
 
+    // Función para buscar activos por nombre
+    function buscarActivo(nombre) {
+        return activos[nombre] ? {nombre: nombre, ...activos[nombre]} : null;
+    }
+
+    // Función para filtrar activos por tasa de crecimiento
+    function filtrarActivos(minCrecimiento, maxCrecimiento) {
+        return Object.entries(activos).filter(([key, value]) => {
+            return value.min >= minCrecimiento && value.max <= maxCrecimiento;
+        }).map(([key]) => key);
+    }
+
     // Ejecutar la simulación
     let resultado = simularInversion(cantidad, activo);
 
@@ -37,12 +49,18 @@ document.getElementById("simulatorForm").addEventListener("submit", function(eve
         let gananciaPerdida = resultado.valorFinal - cantidad;
         let mensajeGananciaPerdida = gananciaPerdida >= 0 ? "Ganancia" : "Pérdida";
 
-        document.getElementById("resultado").innerHTML = `
-            <p>Inversión inicial: $${cantidad.toFixed(2)}</p>
+        document.getElementById("resultado").innerHTML =
+            `<p>Inversión inicial: $${cantidad.toFixed(2)}</p>
             <p>Activo seleccionado: ${activo}</p>
-            <p>Crecimiento estimado: ${(resultado.crecimiento * 100).toFixed(2)}%</p>
+             <p>Crecimiento estimado: ${(resultado.crecimiento * 100).toFixed(2)}%</p>
             <p>Valor final: $${resultado.valorFinal.toFixed(2)}</p>
-            <p>${mensajeGananciaPerdida}: $${gananciaPerdida.toFixed(2)}</p>
-        `;
+            <p>${mensajeGananciaPerdida}: $${gananciaPerdida.toFixed(2)}</p>`;
     }
+
+    // Búsqueda y filtrado
+    let activoBuscado = buscarActivo("acciones");
+    console.log("Resultado de búsqueda:", activoBuscado);
+
+    let activosFiltrados = filtrarActivos(0.01, 0.15);
+    console.log("Activos filtrados:", activosFiltrados);
 });
